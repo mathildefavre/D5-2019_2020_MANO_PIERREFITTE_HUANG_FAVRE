@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/videodetial.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="down">mano</div>
+            <div>Jeux</div>
+        </header>
+        <div class="headerdivs"></div>
+        <div class="Popup">
+            <div class="cha">
+                <img src="../images/cha.png" alt="">
+            </div>
+            <div class="video">
+                <video id="video" autoplay controls src="../video/one.mp4"></video>
+            </div>
+            <div class="introduce">
+                <div class="top">
+                    <h2 class="title">ROCK PAPER SCISSORS LIZARD SPOCK</h2>
+                    <p>nombre de joueur:2</p>
+                </div>
+                <div class="bottom">
+                    <p id="contents">un jue qui revisite &#171 pierre feuille ciseaux &#187 .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $('.cha').click(function () {
+            window.location.href = 'Popup.html'
+        })
+        $('.down').click(function () {
+            window.location.href = '../index.html'
+        });
+        var u = window.location.search.substr(4);
+        console.log(u)
+        let arr = [{
+            video: 'one',
+            title: 'BRAS DE FER CHINOIS',
+            content: 'La solitude est souvent un mot négatif'
+        },{
+            video: 'tow',
+            title: 'CLAQUOUNETTE',
+            content: "Mais dans de nombreux pays d'Asie"
+        },{
+            video: 'three',
+            title: 'ROCK PAPER SCISSORS LIZARD SPOCK',
+            content: "C’est un livre interactif avec des jeux"
+        }];
+        $('#video').attr('src', `../video/${arr[~~u].video}.mp4`);
+        $('.title').html(`${arr[~~u].title}`);
+        $('#contents').html(`${arr[~~u].content}`);
+    </script>
+</body>
+
+</html>

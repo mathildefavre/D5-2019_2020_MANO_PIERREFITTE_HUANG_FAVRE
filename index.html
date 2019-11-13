@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="down">mano</div>
+            <div class="jeux">Jeux</div>
+        </header>
+        <div class="headerdivs"></div>
+        <div class="content">
+            <div class="Middle">
+                <h2>BIENVENUE À TOI!</h2>
+                <div>
+                    <P>Mano te propose des vidéos de jeux.</P>
+                    <P>Tu n'auras besoin que de tes mains pour jouer.</P>
+                    <P>Alors découvre vite les jeux !</P>
+                </div>
+            </div>
+            <div class="drop-down">
+                <img src="images/bottom.png" alt="">
+            </div>
+        </div>
+        <div class="lists">
+            <div class="voirs">
+                <div class="voirsimg">
+                    <img src="images/brasdeferchinois1.png" alt="">
+                </div>
+                <!-- <div style="width:200px"></div> -->
+                <div class="voirsright">
+                    <p>BRAS DE FER CHINOIS</p>
+                    <span>nombre de joueur: 2</span>
+                    <div id="0" class="conbtn">VOIR LA VIDEO</div>
+                </div>
+            </div>
+            <div class="voirs">
+                <div class="voirsimg">
+                    <img src="images/claquounette1.png" alt="">
+                </div>
+                <!-- <div style="width:200px"></div> -->
+                <div class="voirsright">
+                    <p>CLAQUOUNETTE</p>
+                    <span>nombre de joueur: 2</span>
+                    <div id="1" class="conbtn">VOIR LA VIDEO</div>
+                </div>
+            </div>
+            <div class="voirs">
+                <div class="voirsimg">
+                    <img src="images/rockpaper1.png" alt="">
+                </div>
+                <!-- <div style="width:200px"></div> -->
+                <div class="voirsright">
+                    <p>ROCK PAPER SCISSORS LIZARD SPOCK</p>
+                    <span>nombre de joueur: 2</span>
+                    <div  id="2" class="conbtn">VOIR LA VIDEO</div>
+                </div>
+            </div>
+            <div class="Returns">
+                <p>retour en haut</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+         $('.conbtn').click(function(e){
+            // console.log(e.target.id);
+            window.location.href = `pages/videodetial.html?id=${e.target.id}`
+        })
+        //打开
+        $('.drop-down').click(function(){
+            $(".lists").slideDown();
+            $('.content').slideUp("slow");
+        })
+
+        let downs = function(){
+            $(".lists").slideUp("slow");
+            $('.content').slideDown();
+        }
+        $('.down').click(function(){
+            downs();
+        })
+        $('.Returns').click(function(){
+            downs();
+        })
+        $('.jeux').click(function(){
+            window.location.href = 'pages/Popup.html'
+        })
+    </script>
+</body>
+
+</html>

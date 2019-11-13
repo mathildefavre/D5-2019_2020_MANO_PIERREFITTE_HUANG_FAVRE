@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <div class="down">mano</div>
+            <div>Jeux</div>
+        </header>
+        <div class="headerdivs"></div>
+        <div class="Popup">
+            <div class="popupcontent">
+                <div class="contents">
+                    <div class="cha">
+                        <img src="../images/cha.png" alt="">
+                    </div>
+                    <div class="contentli">
+                        <div class="conbtnli">
+                            <p>BRAS DE FER CHINOIS</p>
+                            <div class="kuang"><img src="../images/brasdeferchinois.png" alt=""></div>
+                            <div class="conbtn" id="0">VOIR LA VIDEO</div>
+                        </div>
+                        <div class="conbtnli">
+                            <p>CLAQUOUNETTE</p>
+                            <div class="kuang"><img src="../images/claquounette.png" alt=""></div>
+                            <div class="conbtn" id="1">VOIR LA VIDEO</div>
+                        </div>
+                        <div class="conbtnli">
+                            <p>ROCK PAPER SCISSORS LIZARD SPOCK</p>
+                            <div class="kuang"><img src="../images/rockpaper.png" alt=""></div>
+                            <div class="conbtn" id="2">VOIR LA VIDEO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script>
+        $('.conbtn').click(function(e){
+            // console.log(e.target.id);
+            window.location.href = `videodetial.html?id=${e.target.id}`
+        })
+        $('.cha').click(function(){
+            window.location.href = '../index.html'
+        })
+        $('.down').click(function(){
+            window.location.href = '../index.html'
+        })
+    </script>
+</body>
+
+</html>
